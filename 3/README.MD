@@ -1,12 +1,13 @@
 # Лабораторная работа №3: "Introduction to Testing"
-## Захаров Андрей Викторович
-### Тест-кейс №1
+## Захаров Андрей Викторович 
+## Сайт https://www.binary.com 
+### Тест-кейс №1    
 
 | **Название** 	| **Описание** 	|
 |---	|---	|
 | **Номер** 	| 1 	|
 | **Заголовок** 	| Создание сделки |
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Указать время начало совершение сделки  | Открывается окно для установки даты начало создание сделки, по умолчанию стоит "Сейчас"|
 | Ввести длительность сделки	| Ввести в поле "Длительность"  число, указать формат "секунды","минуты", "часы"|
@@ -23,7 +24,7 @@
 |---	|---	|
 | **Номер** 	| 2 	|
 | **Заголовок** 	| Совершение сделки на сумму более чем позволяет баланс	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)". Пользователь авторизован. На счету 10 000,00$  |
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)". Пользователь авторизован. На счету 10 000,00$  |
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Нажатие на кнопку "Покупка"  и в поле "Ставка" указать 100 000 $ | Всплывает уведомление 'Баланс Вашего счета (10000.00USD) недостаточен для покупки данного контракта (20000.00 USD).' , сделка не произведена, баланс прежний|
 
@@ -33,9 +34,9 @@
 |---	|---	|
 | **Номер** 	| 3 	|
 | **Заголовок** 	| Создание сделки на сумму 0$ |
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$|
 | **Шаг** 	| **Ожидаемый результат** 	|
-| Ввод количества 0 | Всплывает уведомление 'Введите сумму ставки не менее 0.35.'	|
+|Нажатие на кнопку "Покупка"  и в поле "Ставка" указать  0 $  | Всплывает уведомление 'Введите сумму ставки не менее 0.35.'	|
 
 
 ### Тест-кейс №4
@@ -44,7 +45,7 @@
 |---	|---	|
 | **Номер** 	| 4 	|
 | **Заголовок** 	| Создание отложенной сделки ко времени|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Указать время начало совершение сделки  | Открывается окно для установки даты начало создание сделки, по умолчанию стоит "Сейчас"|
 | Ввести длительность сделки	| Ввести в поле "Длительность"  число, указать формат "секунды","минуты", "часы"|
@@ -61,7 +62,7 @@
 |---	|---	|
 | **Номер** 	| 5 	|
 | **Заголовок** 	| Создание некорректной отложенной сделки ко времени |
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован. На счету 10 000,00$  	|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Указать 5 минут  до  начала создании сделки  | Открыть окно для установки даты начало создание сделки, 5 минут  до  начала создании сделки |
 | Ввести длительность сделки	| Ввести в поле "Длительность"  число, указать формат "секунды","минуты", "часы"|
@@ -77,7 +78,7 @@
 |---	|---	|
 | **Номер** 	| 6 	|
 | **Заголовок** 	| Одновременная сделка на повышение и понижение 	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)". Пользователь авторизован. Выбран необходимый актив. На счету достаточно средств для создания сделки 	|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)". Пользователь авторизован. Выбран необходимый актив. На счету достаточно средств для создания сделки 	|
 | **Шаг** 	| **Ожидаемый результат** 	|
 |Указать время начало совершение сделки  | Открывается окно для установки даты начало создание сделки, по умолчанию стоит "Сейчас"|
 | Ввести длительность сделки	| Ввести в поле "Длительность"  число, указать формат "секунды","минуты", "часы"|
@@ -99,7 +100,7 @@
 |---	|---	|
 | **Номер** 	| 7 	|
 | **Заголовок** 	| Изменение индекса	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Нажатие на список индексев | Отображение всплывающего меню с различными индексами 	|
 | Изменяем нынешний индекс на "индекс Wall Stret"	| индекс изменился|
@@ -111,7 +112,7 @@
 |---	|---	|
 | **Номер** 	| 8 	|
 | **Заголовок** 	| Создание  таблицы	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Нажатие на иконку  с изображением графика | Отображение всплывающего меню с возможными комбинациями графика 	|
 | Нажатие кнопку с конфигурацией "таблица" 	| Отображение графика ставок в виде таблицы|
@@ -123,7 +124,7 @@
 |---	|---	|
 | **Номер** 	| 9 	|
 | **Заголовок** 	| Добавление индикатора	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Нажатие на иконку  с изображением индикатора | Отображение всплывающего меню различных индикаторов|
 | Выбираем индикатор 	| Открывется окно с настройками индикатора |
@@ -135,7 +136,7 @@
 |---	|---	|
 | **Номер** 	| 10 	|
 | **Заголовок** 	| Добавление индикатора в избранное	|
-| **Предусловие** 	| Открыта страница ["Trade SmatrTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
+| **Предусловие** 	| Открыта страница ["Trade SmartTrader"](https://www.binary.com/en/trading.html?utm_source=www.binary.bot&currency=USD&market=synthetic_index&underlying=RDBEAR&formname=risefall&date_start=now&duration_amount=1&duration_units=t&amount=10&amount_type=stake&expiry_type=duration)".  Пользователь авторизован.|
 | **Шаг** 	| **Ожидаемый результат** 	|
 | Нажатие на иконку  с изображением индикатора | Отображение всплывающего меню различных индикаторов|
 | Нажимаем на звёздочку рядом с индикатором | Добавляется индиакторв в избранное|
