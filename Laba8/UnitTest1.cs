@@ -3,6 +3,8 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using System.Threading;
+using System.Diagnostics;
 
 namespace Laba8
 {
@@ -14,7 +16,7 @@ namespace Laba8
         private const string Loign = "andreuzakharoy777@gmail.com";
         private const string TestPassword = "yrv}ib6W2n^U";
 
-        private const string ExpectedDeal = "×\r\nЗачисление прошло успешно.";
+        private const string ExpectedDeal = "Получите выплату, если Индекс медвежьего рынка после 5 тиков будет строго выше, чем входная спот-котировка.";
 
         [SetUp]
         public void StartPageSetup()
@@ -31,33 +33,33 @@ namespace Laba8
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='txtPass']"))).SendKeys(TestPassword);
 
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='frmLogin']/div[3]/button"))).Click();
+          
 
-         
         }
 
         [Test]
         public void AddingFundsToYourAccountTest()
         {
-            _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
 
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='underlying_component']"))).Click();
             _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='RDBEAR']"))).Click();
-             
-            //_wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='duration_amount']"))).Click();
-            _driver.FindElement(By.XPath("//*[@id='duration_amount']")).Clear();
-            _driver.FindElement(By.XPath("//*[@id='duration_amount']")).SendKeys("5");
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='tab_graph']"))).Click();
+           
+           
+        
+            _driver.FindElement(By.XPath("//*[@id='amount']")).Clear();
+            _driver.FindElement(By.XPath("//*[@id='amount']")).SendKeys("10");
+           
+            Thread.Sleep(3000);
+            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='purchase_button_top']"))).Click();
 
-            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='amount']"))).Clear();
-            //_driver.FindElement(By.XPath("//*[@id='amount']")).Clear();
-            //_driver.FindElement(By.XPath("//*[@id='amount']")).SendKeys("100");
-            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='amount']"))).SendKeys("100");
-            // _driver.FindElement(By.XPath("//*[@id='purchase_button_bottom']")).Click();
-            _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='purchase_button_bottom']"))).Click();
-            //_wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(" //*[@id='price_container_top']/div[1]/div/span/div[2]"))).Click();
-            //*[@id="price_container_top"]/div[1]/div/span/div[2]
-            //var actualDeal = _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='errorLog']/div"))).Text;
+            Thread.Sleep(3000);
+            var actualDeal = _wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id='contract_purchase_descr']"))).Text;
+            Trace.WriteLine(actualDeal);
 
-            //Assert.AreEqual(ExpectedDeal, actualDeal);
+            Assert.AreEqual(ExpectedDeal, actualDeal);
+
+
         }
 
         [TearDown]
