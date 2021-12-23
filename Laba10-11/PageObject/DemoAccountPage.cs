@@ -52,7 +52,7 @@ namespace Laba9.PageObject
         }
         public DemoAccountPage EnterAddSumPrice()
         {
-            WaitForVisibilityOfElemen(driver, txtPrice).SendKeys("0");
+            WaitForVisibilityOfElemen(driver, txtPrice).SendKeys("10");
             Log.Info("Enter Price");
             return this;
         }
