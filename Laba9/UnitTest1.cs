@@ -37,19 +37,11 @@ namespace Laba9
         [Test]
         public void AddFundsToYourAccountTest()
         {
-            demoAccountPage.ClickBtnBearIndex().EnterAddSumPrice(price);
+            demoAccountPage.ClickBtnBearIndex().ClearPriceNumber().EnterAddSumPrice(price).ClickBtnContract();
             Assert.IsTrue(demoAccountPage.IsVisibilitySuccessAddMoney());
+            
         }
 
-        //[Test]
-        //public void NotAddInvoiceTest()
-        //{
-        //    accountManagementPage = selectAccountPage.ClickSettingInvoice().OpenAccountManagementPage();
-        //    accountManagementPage.EnterInvoice(newLogin);
-        //    accountManagementPage.EnterPassword(newTestPassword);
-        //    accountManagementPage.AddNewInvoice();
-        //    Assert.IsTrue(accountManagementPage.IsVisibilityNotAddInvoice());
-        //}
 
         [TearDown]
         public void TearDown()

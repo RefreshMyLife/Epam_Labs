@@ -52,7 +52,7 @@ namespace Laba9.PageObject
         }
         public DemoAccountPage EnterAddSumPrice()
         {
-            WaitForVisibilityOfElemen(driver, txtPrice).SendKeys("10");
+            WaitForVisibilityOfElemen(driver, txtPrice).SendKeys("0");
             Log.Info("Enter Price");
             return this;
         }
@@ -113,12 +113,7 @@ namespace Laba9.PageObject
             Log.Info("Click Resset button");
             return this;
         }
-        public WebTraderPage ClickWebTraderListItem()
-        {
-            WaitForVisibilityOfElemen(driver, listItemWebTrader).Click();
-            Log.Info("Click to WebTrader button");
-            return new WebTraderPage(driver);
-        }
+       
 
         public BillPage ClickBtnOpenBill()
         {

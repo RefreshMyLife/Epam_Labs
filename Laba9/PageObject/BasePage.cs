@@ -21,9 +21,5 @@ namespace Laba9.PageObject
             return new WebDriverWait(driver, TimeSpan.FromSeconds(50)).Until(ExpectedConditions.ElementIsVisible(webElement));
         }
 
-        protected static IWebElement FindElement(By webElement)
-        {
-            return new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementIsVisible(webElement));
-        }
     }
 }

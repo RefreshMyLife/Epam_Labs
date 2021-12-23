@@ -22,11 +22,6 @@ namespace AvatradeTests.Tests
         protected StartPage startPage;
         protected WebTraderPage webTraderPage;
         protected BillPage billPage;
-        //protected ReplenishmentDemoAccountPage replenishmentDemoAccountPage;
-        //protected AccountManagementPage accountManagementPage;
-        //protected TraderCalculatorPage traderCalculatorPage;
-        //protected TradingPage tradingPage;
-        //protected PersonalInformation personalInformation;
         [SetUp]
         public void StartPageSetup()
         {
@@ -39,7 +34,7 @@ namespace AvatradeTests.Tests
         public void CloseBrowser()
         {
             Log.Info($"Close test: {TestContext.CurrentContext.Test.MethodName}");
-            DriverManager.CloseWebDriver();
+           // DriverManager.CloseWebDriver();
         }
     }
 }
